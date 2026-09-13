@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #07111f;
+  --color-bg-secondary: #0f172a;
+  --color-card: #111c2e;
+  --color-text: #f8fafc;
+  --color-muted: #94a3b8;
+  --color-accent: #f97316;
+  --color-accent-hover: #ea580c;
+  --color-blue: #3b82f6;
+  --color-success: #22c55e;
+  --color-border: rgba(148, 163, 184, 0.16);
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Instrument Sans", "DM Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bg text-text font-sans antialiased;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(59, 130, 246, 0.12), transparent),
+      radial-gradient(ellipse 40% 30% at 100% 0%, rgba(249, 115, 22, 0.08), transparent);
+    min-height: 100vh;
+  }
+
+  ::selection {
+    @apply bg-accent/30 text-text;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent via-orange-400 to-blue bg-clip-text text-transparent;
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .glow-orange {
+    box-shadow: 0 0 40px rgba(249, 115, 22, 0.25);
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 60px rgba(59, 130, 246, 0.15);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}

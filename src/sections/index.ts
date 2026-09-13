@@ -1,0 +1,16 @@
+export { Hero } from './Hero';
+export { TrustBar } from './TrustBar';
+export { About } from './About';
+export { Services } from './Services';
+export { FeaturedSolution } from './FeaturedSolution';
+export { InteractiveDemo } from './InteractiveDemo';
+export { Industries } from './Industries';
+export { Projects, ProjectsShowcase } from './Projects';
+export { CaseStudy } from './CaseStudy';
+export { HowWeWork } from './HowWeWork';
+export { WhyUs } from './WhyUs';
+export { Technology } from './Technology';
+export { RoiSection } from './RoiSection';
+export { Faq } from './Faq';
+export { FinalCta } from './FinalCta';
+export { Contact } from './Contact';
